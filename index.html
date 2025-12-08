@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de juegos de caja</title>
+    <title>Tienda de Juegos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
-    <h1>Tienda de juegos de caja</h1>
-    
+    <header>
+        <h1 class="titulo-principal">Tienda de juegos de caja</h1>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="zona-productos">
+            <h2 class="subtitulo">Catálogo</h2>
+            <div class="lista-productos" id="lista-productos">
+            </div>
+        </section>
+        <aside class="zona-carrito oculto" id="zona-carrito">
+            <h2 class="subtitulo">Carrito</h2>
+
+            <ul class="lista-carrito" id="lista-carrito">
+            </ul>
+
+            <p class="total-carrito">Total: $<span id="total">0</span></p>
+
+            <button id="vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
+        </aside>
+
+    </main>
 
     <script src="assets/js/index.js"></script>
 </body>
+
 </html>
