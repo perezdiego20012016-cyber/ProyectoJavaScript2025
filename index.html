@@ -5,36 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Juegos</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <header>
-        <h1 class="titulo-principal">Tienda de juegos de caja</h1>
+    <header class="header">
+        <nav class="container nav-principal">
+            <h1 class="logo">🎲 Game Mode</h1>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="products.html">Productos</a>
+                <a href="contact.html">Contacto</a>
+            </div>
+        </nav>
     </header>
 
-    <main class="contenedor">
+    <main>
+        <!-- HERO -->
+        <section class="hero-imagen">
+            <div class="hero-overlay">
+                <h1 data-aos="fade-down">El juego empieza en la mesa</h1>
+                <p data-aos="fade-up">
+                    Juegos de mesa pensados para compartir momentos,
+                    risas y desafíos lejos de las pantallas.
+                </p>
 
-        <section class="zona-productos">
-            <h2 class="subtitulo">Catálogo</h2>
-            <div class="lista-productos" id="lista-productos">
+                <button id="darkModeBtn" class="btn btn-outline-light btn-lg" data-aos="zoom-in">
+                    🌙 Modo oscuro
+                </button>
             </div>
         </section>
-        <aside class="zona-carrito oculto" id="zona-carrito">
-            <h2 class="subtitulo">Carrito</h2>
 
-            <ul class="lista-carrito" id="lista-carrito">
-            </ul>
+        <!-- BLOQUE 1 -->
+        <section class="bloque container">
+            <div class="bloque-texto" data-aos="fade-right">
+                <h2>Volver a jugar juntos</h2>
+                <p>Creemos en el poder del juego como punto de encuentro.
+                    Cada partida es una excusa para conectar.</p>
+                <p>Desde clásicos hasta juegos modernos.</p>
+            </div>
 
-            <p class="total-carrito">Total: $<span id="total">0</span></p>
+            <div class="bloque-imagen" data-aos="fade-left">
+                <img src="assets/Imagenes/inicio.jpg" alt="Personas jugando juegos de mesa">
+            </div>
+        </section>
 
-            <button id="vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
-        </aside>
+        <!-- BLOQUE 2 (INVERSO) -->
+        <section class="bloque inverso container">
+            <div class="bloque-imagen" data-aos="fade-right">
+                <img src="assets/Imagenes/inicio2.avif" alt="Juego de estrategia en mesa">
+            </div>
 
+            <div class="bloque-texto" data-aos="fade-left">
+                <h2>Para todas las edades</h2>
+                <p>Juegos familiares, estratégicos, cooperativos y de fiesta.</p>
+                <p>No importa si sos principiante o experto:
+                    lo importante es sentarse a jugar.</p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta" data-aos="fade-up">
+            <h2>Descubrí el mundo de los juegos de mesa</h2>
+            <a href="products.html" class="btn btn-primary btn-lg">
+                Explorar catálogo
+            </a>
+        </section>
     </main>
 
-    <script src="assets/js/index.js"></script>
-</body>
+    <footer class="footer">
+        <p>© 2026 · Tienda de Juegos de Caja</p>
 
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/598XXXXXXXX" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
 </html>
