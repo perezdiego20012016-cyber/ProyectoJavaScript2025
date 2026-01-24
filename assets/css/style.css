@@ -1,14 +1,10 @@
-/* ======================================================
-   RESET & BASE
-====================================================== */
-
 body {
     margin: 0;
     min-height: 100vh;
     font-family: "Segoe UI", Arial, sans-serif;
     position: relative;
 
-    /* Fondo claro */
+
     background-image: url("../Imagenes/fondoprincipal2.png");
     background-size: cover;
     background-position: center;
@@ -16,7 +12,6 @@ body {
     background-attachment: fixed;
 }
 
-/* Capa opaca del fondo */
 body::before {
     content: "";
     position: fixed;
@@ -26,16 +21,12 @@ body::before {
 }
 
 
-/* ======================================================
-   TIPOGRAFÍA GENERAL
-====================================================== */
-
 .titulo-principal {
     text-align: center;
     margin: 30px 0;
     font-weight: 700;
     font-size: 2.2rem;
-    color: #6c63ff;
+    color: #010007;
 }
 
 p {
@@ -43,9 +34,7 @@ p {
 }
 
 
-/* ======================================================
-   HEADER / NAV
-====================================================== */
+
 
 .nav-principal {
     display: flex;
@@ -84,9 +73,7 @@ p {
 }
 
 
-/* ======================================================
-   HERO
-====================================================== */
+
 
 .hero-imagen {
     height: 80vh;
@@ -122,9 +109,6 @@ p {
 }
 
 
-/* ======================================================
-   BLOQUES DE CONTENIDO
-====================================================== */
 
 .bloque {
     display: flex;
@@ -159,9 +143,7 @@ p {
 }
 
 
-/* ======================================================
-   CTA
-====================================================== */
+
 
 .cta {
     background: linear-gradient(135deg, #6c63ff, #4f46e5);
@@ -171,9 +153,6 @@ p {
 }
 
 
-/* ======================================================
-   FOOTER
-====================================================== */
 
 .footer {
     text-align: center;
@@ -200,9 +179,6 @@ p {
 }
 
 
-/* ======================================================
-   WHATSAPP FLOAT
-====================================================== */
 
 .whatsapp-float {
     position: fixed;
@@ -229,9 +205,7 @@ p {
 }
 
 
-/* ======================================================
-   BOTÓN MODO OSCURO
-====================================================== */
+
 
 #darkModeBtn {
     position: fixed;
@@ -242,9 +216,7 @@ p {
 }
 
 
-/* ======================================================
-   MODO OSCURO
-====================================================== */
+
 
 body.dark-mode {
     background-image: none;
@@ -256,13 +228,13 @@ body.dark-mode::before {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Textos generales */
+
 body.dark-mode p,
 body.dark-mode .bloque-texto {
     color: #eaeaea;
 }
 
-/* Navegación */
+
 body.dark-mode .nav-links a {
     color: #90ee90;
 }
@@ -271,13 +243,13 @@ body.dark-mode .nav-links a:hover {
     background: #1e1e1e;
 }
 
-/* Footer */
+
 body.dark-mode .footer {
     background: #1a1a1a;
     color: #cccccc;
 }
 
-/* CTA */
+
 body.dark-mode .cta {
     background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
 }

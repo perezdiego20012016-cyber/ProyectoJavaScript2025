@@ -1,6 +1,3 @@
-/* ======================================================
-   DATA
-====================================================== */
 
 const listaDeProductos = [
   { id: 1, nombre: "Monopoly", precio: 3500, imagen: "assets/Imagenes/monopoly.webp" },
@@ -19,9 +16,7 @@ const listaDeProductos = [
   { id: 14, nombre: "Click", precio: 950, imagen: "assets/Imagenes/click.png" },
 ];
 
-/* ======================================================
-   DOM
-====================================================== */
+
 
 const contenedorProductos = document.getElementById("cards-row");
 const listaCarrito = document.getElementById("lista-carrito");
@@ -30,16 +25,10 @@ const zonaCarrito = document.getElementById("zona-carrito");
 const botonVaciar = document.getElementById("vaciar-carrito");
 const favoritosRow = document.getElementById("favoritos-row");
 
-/* ======================================================
-   ESTADO
-====================================================== */
 
 let carrito = [];
 let favoritos = [];
 
-/* ======================================================
-   STORAGE
-====================================================== */
 
 const guardarStorage = (clave, valor) =>
   localStorage.setItem(clave, JSON.stringify(valor));
@@ -47,9 +36,6 @@ const guardarStorage = (clave, valor) =>
 const cargarStorage = (clave) =>
   JSON.parse(localStorage.getItem(clave)) || [];
 
-/* ======================================================
-   TOASTIFY
-====================================================== */
 
 const mostrarToast = (texto, tipo = "success") => {
   const colores = {
@@ -66,9 +52,6 @@ const mostrarToast = (texto, tipo = "success") => {
   }).showToast();
 };
 
-/* ======================================================
-   CARRITO + LAYOUT
-====================================================== */
 
 function actualizarLayout() {
   if (carrito.length > 0) {
@@ -130,9 +113,6 @@ botonVaciar.addEventListener("click", () => {
   mostrarToast("Carrito vaciado", "danger");
 });
 
-/* ======================================================
-   FAVORITOS + SWEETALERT
-====================================================== */
 
 function actualizarFavoritosDOM() {
   document.querySelectorAll(".btn-favorito").forEach(btn => {
@@ -173,9 +153,6 @@ function toggleFavorito(id) {
   });
 }
 
-/* ======================================================
-   RENDER
-====================================================== */
 
 function mostrarProductos() {
   contenedorProductos.innerHTML = "";
@@ -229,9 +206,6 @@ function mostrarFavoritos() {
   });
 }
 
-/* ======================================================
-   INIT
-====================================================== */
 
 carrito = cargarStorage("carrito");
 favoritos = cargarStorage("favoritos");
