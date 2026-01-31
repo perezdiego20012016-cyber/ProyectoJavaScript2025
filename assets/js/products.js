@@ -1,20 +1,16 @@
 
-const listaDeProductos = [
-  { id: 1, nombre: "Monopoly", precio: 3500, imagen: "assets/Imagenes/monopoly.webp" },
-  { id: 2, nombre: "Risk", precio: 4200, imagen: "assets/Imagenes/risk.jpg" },
-  { id: 3, nombre: "Virus", precio: 1500, imagen: "assets/Imagenes/virus.jpg" },
-  { id: 4, nombre: "The Mind", precio: 1800, imagen: "assets/Imagenes/themind.png" },
-  { id: 5, nombre: "Scrabble", precio: 3200, imagen: "assets/Imagenes/SCRABBLE.jpg" },
-  { id: 6, nombre: "Cluedo", precio: 3800, imagen: "assets/Imagenes/CLUEDO.jpg" },
-  { id: 7, nombre: "Trivial Pursuit", precio: 4500, imagen: "assets/Imagenes/Trivial Pursuit.jpg" },
-  { id: 8, nombre: "Jenga", precio: 1700, imagen: "assets/Imagenes/JENGA.jpg" },
-  { id: 9, nombre: "Pack de Dados", precio: 500, imagen: "assets/Imagenes/dados.png" },
-  { id: 10, nombre: "Poker", precio: 1100, imagen: "assets/Imagenes/poker.png" },
-  { id: 11, nombre: "Uno", precio: 350, imagen: "assets/Imagenes/uno.png" },
-  { id: 12, nombre: "Uno Flip", precio: 500, imagen: "assets/Imagenes/unoFlip.png" },
-  { id: 13, nombre: "Dos", precio: 650, imagen: "assets/Imagenes/dos.png" },
-  { id: 14, nombre: "Click", precio: 950, imagen: "assets/Imagenes/click.png" },
-];
+let listaDeProductos = [];
+
+fetch("assets/data/products.json")
+  .then(response => response.json())
+  .then(data => {
+    listaDeProductos = data;
+    mostrarProductos();
+  })
+  .catch(error => {
+    console.error("Error cargando productos:", error);
+  });
+
 
 
 
@@ -210,6 +206,5 @@ function mostrarFavoritos() {
 carrito = cargarStorage("carrito");
 favoritos = cargarStorage("favoritos");
 
-mostrarProductos();
 actualizarCarrito();
 actualizarFavoritosDOM();
